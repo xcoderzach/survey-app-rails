@@ -1,8 +1,7 @@
 require 'test_helper'
 
 class GroupTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should belong_to :class_instance
+  should have_many :students
+  should have_many :surveys
 end
