@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110331182701) do
+ActiveRecord::Schema.define(:version => 20110331190053) do
+
+  create_table "class_instances", :force => true do |t|
+    t.string   "name"
+    t.integer  "instructor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.string   "class_instance_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questionaires", :force => true do |t|
     t.string   "title"
@@ -34,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20110331182701) do
   end
 
   create_table "responses", :force => true do |t|
-    t.string   "value"
     t.integer  "question_id"
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,5 +62,21 @@ ActiveRecord::Schema.define(:version => 20110331182701) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "name"
+    t.string   "type"
+    t.string   "encrypted_password", :limit => 128
+    t.string   "salt",               :limit => 128
+    t.string   "confirmation_token", :limit => 128
+    t.string   "remember_token",     :limit => 128
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
