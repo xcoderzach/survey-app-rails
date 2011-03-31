@@ -1,4 +1,6 @@
 class Group < ActiveRecord::Base
   has_many :users
-  belongs_to :class
+  has_many :surveys, :as => :owner
+  belongs_to :class_instance
+>>>>>>> added class instances
 end
