@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110331184601) do
+ActiveRecord::Schema.define(:version => 20110331185418) do
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.string   "class_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questionaires", :force => true do |t|
     t.string   "title"
@@ -34,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20110331184601) do
   end
 
   create_table "responses", :force => true do |t|
-    t.string   "value"
     t.integer  "question_id"
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20110331184601) do
     t.string   "salt",               :limit => 128
     t.string   "confirmation_token", :limit => 128
     t.string   "remember_token",     :limit => 128
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
