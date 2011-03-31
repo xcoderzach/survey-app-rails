@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110331175143) do
+ActiveRecord::Schema.define(:version => 20110331180725) do
 
   create_table "questionaires", :force => true do |t|
     t.string   "title"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20110331175143) do
     t.integer  "max_selections"
     t.integer  "min_selections"
     t.text     "options"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "surveys", :force => true do |t|
+    t.integer  "owner_id"
+    t.string   "owner_type"
+    t.integer  "questionaire_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
