@@ -4,6 +4,7 @@ class CreateSurveys < ActiveRecord::Migration
       t.integer    :owner_id
       t.string     :owner_type
       t.integer    :questionaire_id
+      t.integer    :completion_status
       t.timestamps
     end
   end
