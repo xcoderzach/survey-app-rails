@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class QuestionTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+  should have_and_belong_to_many :questionaires
+  should have_many :responses
 end
