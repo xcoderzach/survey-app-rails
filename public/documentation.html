@@ -59,7 +59,58 @@
       <pre class = "response">
       </pre>
     </div> 
-
+    <h1>Questions</h1>
+    <div class = "documentation">
+      <span class = "method">POST</span>
+      <a href = "/questions.xml" class = "url">/questions.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">question[text]</span>=<span class = "value">A motha fuckin question!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[typeof]</span>=<span class = "value">multiple</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[options][0]</span>=<span class = "value">Awesome</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[options][1]</span>=<span class = "value">Double Awesome</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[options][2]</span>=<span class = "value">Triple Awesome</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div>  
+    <div class = "documentation">
+      <span class = "method">PUT</span>
+      <a href = "/questions/1.xml" class = "url">/questions/1.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">question[text]</span>=<span class = "value">A motha fuckin otha question!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[typeof]</span>=<span class = "value">text</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <div class = "documentation">
+      <span class = "method">DELETE</span>
+      <a href = "/questions/1.xml" class = "url">/questions/1.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">question[text]</span>=<span class = "value">A motha fuckin otha question!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">question[typeof]</span>=<span class = "value">text</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div>  
     <script type="text/javascript" charset="utf-8">
       $(".documentation").each(function(index, element) {
         var method = $(".method", element).text()
@@ -89,8 +140,6 @@
             })
         })
       })
-
-        
     </script>
   </body>
 </html>

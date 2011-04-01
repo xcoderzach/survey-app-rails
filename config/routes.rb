@@ -58,6 +58,7 @@ SurveyRails::Application.routes.draw do
   #
   
   resources :questionaires
+  resources :questions
   resource :session, :controller => 'sessions'
   
 end
