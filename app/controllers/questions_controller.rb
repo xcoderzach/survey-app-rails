@@ -8,4 +8,8 @@ class QuestionsController < ApplicationController
   def show 
     respond_with @question = Question.where(:id => params[:id])
   end
+
+  def create 
+    respond_with @question = Question.create(params[:question])
+  end  
 end 
