@@ -16,6 +16,6 @@ class QuestionairesController < ApplicationController
   # examples:
   # POST /questionaires.xml
   def create 
-    respond_with @questionaire = Questionaire.create(params)
+    respond_with @questionaire = Questionaire.create(params[:questionaire])
   end  
 end
