@@ -1,5 +1,5 @@
 SurveyRails::Application.routes.draw do
-  resources :questionaires
+  resources :questionnaires
   resources :surveys
   resources :questions
   resources :users

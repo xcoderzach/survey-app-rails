@@ -26,14 +26,14 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
     t.datetime "updated_at"
   end
 
-  create_table "questionaires", :force => true do |t|
+  create_table "questionnaires", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "questionaires_questions", :id => false, :force => true do |t|
-    t.integer "questionaire_id"
+  create_table "questionnaires_questions", :id => false, :force => true do |t|
+    t.integer "questionnaire_id"
     t.integer "question_id"
   end
 
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
 
   create_table "surveys", :force => true do |t|
     t.integer  "owner_id"
-    t.integer  "questionaire_id"
+    t.integer  "questionnaire_id"
     t.integer  "completion_status"
     t.datetime "created_at"
     t.datetime "updated_at"
