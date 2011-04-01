@@ -12,4 +12,8 @@ class QuestionsController < ApplicationController
   def create 
     respond_with @question = Question.create(params[:question])
   end  
+
+  def update
+    respond_with @question = Question.update(params[:id], params[:question])
+  end  
 end 
