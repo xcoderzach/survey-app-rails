@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>API Reference Documentation</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
+      <pre class = "response">
+      </pre>
+    </div>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires/1.xml" class = "url">/questionaires/1.xml</a>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <div class = "documentation">
+      <span class = "method">POST</span>
+      <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">Super awesome title!</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div>  
+    <script type="text/javascript" charset="utf-8">
+      $(".documentation").each(function(index, element) {
+        var method = $(".method", element).text()
+          , link = $(".url", element)
+          , url = link.attr("href")
+          , response = $(".response", element)
+          , data = $(".data .datum")
+          , postData = {}
+
+        data.each(function(index, datum) {
+          var key = $(".key", datum).text()
+            , val = $(".value", datum).text()
+          postData[key] = val
+        })
+
+
+        link.click(function(event) {
+          var options = {type: method, dataType: "text"}
+          if(data.length !== 0) {
+            options.data = postData
+          }
+          event.preventDefault()
+          $.ajax(url, options) 
+            .success(function(res) {
+              console.log(res)
+              response.text(res)
+            })
+        })
+      })
+
+        
+    </script>
+  </body>
+</html>

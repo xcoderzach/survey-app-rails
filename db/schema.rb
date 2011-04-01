@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "type"
+    t.string   "typeof"
     t.text     "text"
     t.integer  "max_selections"
     t.integer  "min_selections"
