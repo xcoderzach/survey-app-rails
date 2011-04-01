@@ -28,6 +28,38 @@
       <pre class = "response">
       </pre>
     </div>  
+    <div class = "documentation">
+      <span class = "method">PUT</span>
+      <a href = "/questionaires/1.xml" class = "url">/questionaires/1.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">A new title!</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <div class = "documentation">
+      <span class = "method">PUT</span>
+      <a href = "/questionaires/2.xml" class = "url">/questionaires/2.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">A new title!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][0][id]</span>=<span class = "value">1</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][1][typeof]</span>=<span class = "value">text</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][1][text]</span>=<span class = "value">A new question?</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div> 
+
     <script type="text/javascript" charset="utf-8">
       $(".documentation").each(function(index, element) {
         var method = $(".method", element).text()

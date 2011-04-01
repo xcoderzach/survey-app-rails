@@ -14,6 +14,7 @@ class QuestionairesController < ApplicationController
   end  
 
   def update
+    puts(params.inspect)
     respond_with @questionaire = Questionaire.update(params[:id], params[:questionaire])
   end   
 end
