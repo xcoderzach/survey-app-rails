@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>API Reference Documentation</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
+      <pre class = "response">
+      </pre>
+    </div>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires/1.xml" class = "url">/questionaires/1.xml</a>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <script type="text/javascript" charset="utf-8">
+      $(".documentation").each(function(index, element) {
+        var method = $(".method", element).text()
+          , link = $(".url", element)
+          , url = link.attr("href")
+          , response = $(".response", element)
+
+        link.click(function(event) {
+          event.preventDefault()
+          $.ajax(url, {type: method, dataType: "text"}) 
+            .success(function(res) {
+              console.log(res)
+              response.text(res)
+            })
+        })
+      })
+
+        
+    </script>
+  </body>
+</html>
