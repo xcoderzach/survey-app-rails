@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     respond_with @user = User.create(params[:user]), :action => :show
   end
 
-  def show
+  def destroy
     @user = User.where(:id => params[:id])
     respond_with User.destroy(@user)
   end
