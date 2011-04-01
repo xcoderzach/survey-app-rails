@@ -23,7 +23,6 @@ $(".documentation").each(function(index, element) {
     event.preventDefault()
     $.ajax(url, options) 
       .success(function(res) {
-        console.log(res)
         response.text(res)
       })
   })
