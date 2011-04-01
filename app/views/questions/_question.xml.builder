@@ -9,4 +9,9 @@ xml.question :type => question.typeof do
       end
     end
   end
+  xml.questionaires do 
+    question.questionaires.each do |questionaire|
+      xml.questionaire :id => questionaire.id
+    end
+  end 
 end
