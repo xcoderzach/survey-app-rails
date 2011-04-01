@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>API Reference Documentation - Index</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src = "/javascripts/documentation.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Questionaires</h1>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
+      <pre class = "response">
+      </pre>
+    </div>
+    <div class = "documentation">
+      <span class = "method">GET</span>
+      <a href = "/questionaires/1.xml" class = "url">/questionaires/1.xml</a>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <div class = "documentation">
+      <span class = "method">POST</span>
+      <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">Super awesome title!</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div>  
+    <div class = "documentation">
+      <span class = "method">PUT</span>
+      <a href = "/questionaires/1.xml" class = "url">/questionaires/1.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">A new title!</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div> 
+    <div class = "documentation">
+      <span class = "method">PUT</span>
+      <a href = "/questionaires/2.xml" class = "url">/questionaires/2.xml</a>
+      <ul class = "data">
+        <li class = "datum">
+          <span class = "key">questionaire[title]</span>=<span class = "value">A new title!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][0][id]</span>=<span class = "value">1</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][1][typeof]</span>=<span class = "value">text</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionaire[questions_attributes][1][text]</span>=<span class = "value">A new question?</span>
+        </li>
+      </ul>
+      <pre class = "response">
+      </pre>
+    </div>  
+  </body>
+</html>
