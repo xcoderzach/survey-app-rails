@@ -5,6 +5,7 @@
     <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+    <h1>Questionaires</h1>
     <div class = "documentation">
       <span class = "method">GET</span>
       <a href = "/questionaires.xml" class = "url">/questionaires.xml</a>
@@ -100,17 +101,27 @@
     <div class = "documentation">
       <span class = "method">DELETE</span>
       <a href = "/questions/1.xml" class = "url">/questions/1.xml</a>
+      <pre class = "response">
+      </pre>
+    </div>  
+    <h1>Users</h1>
+    <div class = "documentation">
+      <span class = "method">POST</span>
+      <a href = "/users.xml" class = "url">/users.xml</a>
       <ul class = "data">
         <li class = "datum">
-          <span class = "key">question[text]</span>=<span class = "value">A motha fuckin otha question!</span>
+          <span class = "key">user[email]</span>=<span class = "value">x.coder.zach@gmail.com</span>
         </li>
         <li class = "datum">
-          <span class = "key">question[typeof]</span>=<span class = "value">text</span>
+          <span class = "key">user[name]</span>=<span class = "value">Zach Smith</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">user[password]</span>=<span class = "value">typeof</span>
         </li>
       </ul>
       <pre class = "response">
       </pre>
-    </div>  
+    </div> 
     <script type="text/javascript" charset="utf-8">
       $(".documentation").each(function(index, element) {
         var method = $(".method", element).text()
