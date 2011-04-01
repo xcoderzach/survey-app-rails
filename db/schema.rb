@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
 
   create_table "responses", :force => true do |t|
     t.integer  "question_id"
+    t.integer  "survey_id"
     t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -56,7 +57,6 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
 
   create_table "surveys", :force => true do |t|
     t.integer  "owner_id"
-    t.string   "owner_type"
     t.integer  "questionaire_id"
     t.integer  "completion_status"
     t.datetime "created_at"
