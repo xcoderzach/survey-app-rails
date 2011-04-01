@@ -1,4 +1,4 @@
-xml.group do
+xml.group :id => group.id do
   xml.name group.name
   xml.class :id => group.class_instance_id
   xml.users do
