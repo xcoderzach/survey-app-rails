@@ -1,4 +1,4 @@
-xml.survey do
+xml.survey :id => survey.id do
   xml.owner :id => survey.owner_id
   xml.questionaire :id => survey.owner_id
   xml.responses do
