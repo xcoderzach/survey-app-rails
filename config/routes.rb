@@ -3,4 +3,5 @@ SurveyRails::Application.routes.draw do
   resources :surveys
   resources :questions
   resources :users
+  resources :groups
 end
