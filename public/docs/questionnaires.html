@@ -23,9 +23,15 @@
     <div class = "documentation">
       <span class = "method">POST</span>
       <a href = "/questionnaires.xml" class = "url">/questionnaires.xml</a>
+      <p><h3>What it does</h3>
+        This will create a new questionnaire with title "Super awesome title!" and specifies author's id is 2 
+      </p>
       <ul class = "data">
         <li class = "datum">
           <span class = "key">questionnaire[title]</span>=<span class = "value">Super awesome title!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionnaire[author_id]</span>=<span class = "value">2</span>
         </li>
       </ul>
       <pre class = "response">
@@ -34,33 +40,19 @@
     <div class = "documentation">
       <span class = "method">PUT</span>
       <a href = "/questionnaires/1.xml" class = "url">/questionnaires/1.xml</a>
+      <p><h3>What it does</h3>
+        This will update the questionnaire with id 1 to have the title "A new title!" and specifies that the author's id is 3 
+      </p>
       <ul class = "data">
         <li class = "datum">
           <span class = "key">questionnaire[title]</span>=<span class = "value">A new title!</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionnaire[author_id]</span>=<span class = "value">3</span>
         </li>
       </ul>
       <pre class = "response">
       </pre>
     </div> 
-    <div class = "documentation">
-      <span class = "method">PUT</span>
-      <a href = "/questionnaires/2.xml" class = "url">/questionnaires/2.xml</a>
-      <ul class = "data">
-        <li class = "datum">
-          <span class = "key">questionnaire[title]</span>=<span class = "value">A new title!</span>
-        </li>
-        <li class = "datum">
-          <span class = "key">questionnaire[questions_attributes][0][id]</span>=<span class = "value">1</span>
-        </li>
-        <li class = "datum">
-          <span class = "key">questionnaire[questions_attributes][1][typeof]</span>=<span class = "value">text</span>
-        </li>
-        <li class = "datum">
-          <span class = "key">questionnaire[questions_attributes][1][text]</span>=<span class = "value">A new question?</span>
-        </li>
-      </ul>
-      <pre class = "response">
-      </pre>
-    </div>  
   </body>
 </html>
