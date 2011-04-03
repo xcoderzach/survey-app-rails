@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20110331190053) do
 
   create_table "questionnaires", :force => true do |t|
     t.string   "title"
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
