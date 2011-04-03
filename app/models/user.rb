@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   belongs_to :group
   has_many :class_instances, :foreign_key => "instructor_id"
   has_many :surveys, :foreign_key => :owner_id
+  has_many :questionnaires, :foreign_key => :author_id
 
   def password=(password)
     encrypted_password = Digest::SHA1.hexdigest("sdfasdfsd" + password + "jh23i4y23i4gruhekfhbsdkhfgwuyrtjdshgf")
