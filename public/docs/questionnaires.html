@@ -25,6 +25,8 @@
       <a href = "/questionnaires.xml" class = "url">/questionnaires.xml</a>
       <p><h3>What it does</h3>
         This will create a new questionnaire with title "Super awesome title!" and specifies author's id is 2 
+      </p><p>
+        question_ids are optional and specify the questions and their order (this xml is broken)
       </p>
       <ul class = "data">
         <li class = "datum">
@@ -32,6 +34,9 @@
         </li>
         <li class = "datum">
           <span class = "key">questionnaire[author_id]</span>=<span class = "value">2</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionnaire[question_ids]</span>=<span class = "value">3,2,1,10,5</span>
         </li>
       </ul>
       <pre class = "response">
@@ -42,6 +47,8 @@
       <a href = "/questionnaires/1.xml" class = "url">/questionnaires/1.xml</a>
       <p><h3>What it does</h3>
         This will update the questionnaire with id 1 to have the title "A new title!" and specifies that the author's id is 3 
+      </p><p>
+        question_ids are optional and specify the questions and their order (this xml is broken) this will REPLACE the previous list of questions
       </p>
       <ul class = "data">
         <li class = "datum">
@@ -49,6 +56,9 @@
         </li>
         <li class = "datum">
           <span class = "key">questionnaire[author_id]</span>=<span class = "value">3</span>
+        </li>
+        <li class = "datum">
+          <span class = "key">questionnaire[question_ids]</span>=<span class = "value">3,2,1,10,5</span>
         </li>
       </ul>
       <pre class = "response">
