@@ -1,11 +1,11 @@
 xml.survey :id => survey.id do
   xml.owner :id => survey.owner_id
-  xml.questionnaire :id => survey.owner_id
+  xml.questionnaire :id => survey.questionaire_id, :title => survey.questionnaire.title
   xml.responses do
     survey.responses.each do |response|
       xml.response do
         xml.value response.value
-        xml.question :id => response.question_id
+        xml << render(:partial => response.question)
       end
     end
   end
