@@ -3,16 +3,12 @@ class Questionnaire < ActiveRecord::Base
   has_many :surveys
   belongs_to :author, :class_name => "User"
 
-  def questions_attributes=(questions)
+  def question_ids=(questions)
     if(questions)
-      questions.each do |index, question|
-        if(question["id"])
-          q = Question.update(question["id"], question)
-        else
-          q = Question.new question
-          q.save
-        end
-        self.questions.push(q)
+      questions = (questions || "").split(",")
+      self.questions.clear
+      questions.each do |id|
+        self.questions << Question.find(id)
       end
     end
   end

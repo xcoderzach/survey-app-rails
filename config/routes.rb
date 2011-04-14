@@ -4,5 +4,6 @@ SurveyRails::Application.routes.draw do
   resources :questions
   resources :users
   resources :groups
+  resources :tests
   resources :class_instances
 end

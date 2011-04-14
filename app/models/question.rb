@@ -8,8 +8,10 @@ class Question < ActiveRecord::Base
 
   def options=(options)
     opts = []
-    options.each do |k, v|
-      opts.push(v)
+    if(options)
+      options.each do |k, v|
+        opts.push(v)
+      end
     end
     write_attribute :options, opts.join("|")
   end
