@@ -3,7 +3,7 @@ class Question < ActiveRecord::Base
   has_many :responses
 
   def options
-    read_attribute(:options).split "|"
+    (read_attribute(:options) || "").split "|"
   end
 
   def options=(options)
