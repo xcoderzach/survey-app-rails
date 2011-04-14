@@ -1,6 +1,7 @@
 xml.survey :id => survey.id do
   xml.owner :id => survey.owner_id, :name => survey.owner.name
-  xml.questionnaire :id => survey.questionnaire_id, :title => survey.questionnaire.title
+  xml.questionnaire :id => survey.questionnaire_id
+  xml.title survey.questionnaire.title
   xml.responses do
     survey.responses.each do |response|
       xml.response do
